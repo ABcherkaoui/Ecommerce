@@ -156,9 +156,9 @@ body{
 {
     border: 1px solid #DDDDDB;
     padding: 20px;
-    position: relative;    /*نطبق هدا التنسيق لكي نتمكن من ازاحة الكتابة */
-    top: 50px;             /*ازاحة  الاطار الكلي من الاعلى الى الاسفل بمقدا*/
-    height: 200px;         /* الارتفاع الكلي للاطار*/
+    position: relative;    
+    top: 50px;             
+    height: 200px;         
     background-color: #f7f8f3;
 }
 
@@ -182,7 +182,7 @@ body{
 {
     color: #f8ad47;
     border-color: #f8ad47;
-    background-color: transparent;  /*شفاف*/
+    background-color: transparent;  
     padding: 9px 25px;
     margin-top: 15px;
     font-size: 18px;
@@ -193,23 +193,23 @@ body{
     background-color: #53ccd7;
     color: white;
     font-weight: bold;
-    position: absolute;     /* نقوم بوظع هدا التنسيق لنتمكن من ازاحتها وتحريرها*/
+    position: absolute;    
 }
 .sale.large
 {
     height: 60px;
     width: 60px;
-    border-radius: 50%;          /* يقوم بعمل دائرة*/
-    justify-content: center;    /* لكي يظهر الخط في وسط الدائرة افقيا*/
-    align-items: center;        /* لكي يظهر الخط في وسط الدائرة افقيا*/
+    border-radius: 50%;          
+    justify-content: center;   
+    align-items: center;        
     padding: 35px;
     left: -15px;
     top: -15px;
-    line-height: 90%;             /* يقوم بتحديد ارتفاع السطر */
-    transform: rotate(-25deg);    /*تعني الاستدارة بمقدار 25 درجة*/
+    line-height: 90%;             
+    transform: rotate(-25deg);    
     font-size: 130%;  
-    display: flex;          /*في حالة ادا لم تتسع الجملة بانها تقوم بترصف بشكل  عمودي*/
-    flex-direction: column; /*في حالة ادا لم تتسع الجملة بانها تقوم بترصف بشكل  عمودي*/
+    display: flex;         
+    flex-direction: column; 
 }
 #carousel-featured .product-details .sale.large span
 {
@@ -217,8 +217,8 @@ body{
 }
 .custom-carousel-indicators-primary
 {
-    top: 235px;     /*نحدد هاتين القياسين لكي نزيح الشريط باكمله الى الموضع الدي نريده */
-    right: 40.65%;       /*ان يتوضع فيه الشريط*/
+    top: 235px;     
+    right: 40.65%;       
   
 }
 .custom-carousel-indicators-primary img
@@ -227,11 +227,11 @@ body{
     width: 75px;
     border: 2px solid #DDDDDB;
     background-color: #fff;
-    margin-right: 2px;              /*نضع هدا النتسيق لكي نجعل فراغ بين الصور*/
+    margin-right: 2px;              
 }
 .custom-carousel-indicators-primary img.active
 {
-    border-color: #f8ad47;       /*الصورة التي نستهدفها هي التي يظهر عليها الاطار بهدا اللون */
+    border-color: #f8ad47;       
 }
 #carousel-featured .carousel-control-prev,
 #carousel-featured .carousel-control-next
@@ -239,7 +239,7 @@ body{
     background: 0 0;
     color: #868686;
     text-shadow: none;
-    font-size: 20px;    /*لتحديد حجم السهمين*/
+    font-size: 20px;   
 }
 .custom-carousel-control.carousel-control-prev>i
 {
@@ -252,8 +252,179 @@ body{
     left: 25%;
 }
 
-
 .carousel-row>.col-12
 {
     padding: 0;
+}
+
+/*قسم مميزات المتجر*/
+#store-features
+{
+    box-shadow: 0 0 15px #EEF0EA;
+    position: relative;
+    top: -30px;
+    background-image: url(../images/bg_features.png);
+    background-repeat: no-repeat;
+    background-size: auto 60%;     
+    background-position: -10px -20px; 
+    background-color: #fff;
+    padding-bottom: 35px;
+    padding-top: 5px;
+}
+#store-features .feature>img
+{
+    height: 40px;
+    margin-bottom: 10px;
+}
+#store-features .feature+.feature    
+{
+    border-right: 1px solid #EEF0EA; 
+}
+h3.custom-heading
+{
+    font-size: 24px;
+    margin: 20px 0 25px;
+}
+
+ /*المنتجات الاكثر مبيعا*/
+ .custom-thumbnail
+ {
+     border: 2px solid #EEF0EA;
+     padding: 8px;
+     cursor: pointer; 
+     margin-bottom: 20px;
+ }
+ .custom-thumbnail:hover
+ {
+     border-color: #53ccd7;
+ }
+ .custom-thumbnail h4
+ {
+     font-size: 18px;
+     padding-top: 10px; 
+ }
+ .custom-thumbnail .card-body 
+{
+    padding: 9px; 
+}
+.custom-thumbnail .price
+{
+    padding-top: 10px;  
+}
+.price
+{
+    color: #53ccd7;
+}
+.rating
+{
+    color: #c2c2c2;
+}
+.rating .active
+{
+    color: #f3af41;
+}
+.overlay
+{
+    position: absolute; 
+    background-color: rgba(83, 204, 215, .5);
+    height: 250px;    
+    width: calc(100% - 16px);  
+    display: flex;   
+    justify-content: center; 
+    align-items: center;    
+    opacity: 0; 
+    transition: all .3s ease; 
+}
+.overlay:hover
+{
+    opacity: 1; 
+}
+.add-to-cart-btn   
+{
+    background-color: #ffffff;
+    color: #19becd;
+    font-weight: bold; 
+}
+
+/*تنسيقات الخاصة بالخصم*/
+.custom-thumbnail .sale    
+{
+    padding: 5px 10px;
+    position: absolute;  
+    left: 16px;
+    top: 14px;
+    direction: ltr;
+}
+.custom-thumbnail .sale::before  
+{
+    content: '-';  
+}
+
+/*تنسيقات نقاط التنقل*/
+.custom-carousel-indicators    
+{
+    position: static; 
+    width: 100%;      
+    text-align: center; 
+    margin: 0; 
+}
+.custom-carousel-indicators>li,
+.custom-carousel-indicators>li.active 
+{
+    height: 13px;
+    width: 13px;
+    margin: 2px;
+    display: inline-block; 
+    background-color: #dbdbdb;
+}
+.custom-carousel-indicators>li.active  
+{
+    background-color: #565656;
+}
+.custom-thumbnail img
+{
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block; 
+}
+
+ /*قسم  المركات العالمية*/
+ .custom-panel  
+ {
+     border: 4px solid #EEF0EA;
+     border-radius: 2px;
+     box-shadow: none;
+     padding: 20px;
+ }
+ .custom-panel .product-image 
+ {
+     width: 100%;
+     margin-bottom: 8px;
+ }
+.custom-btn-primary   
+{
+    color: #F8AD47;
+    border-color: #F8AD47;
+    background-color: transparent;
+}
+.custom-btn-primary:hover, .custom-btn-primary:focus, 
+.custom-btn-primary:active, .custom-btn-primary:active:hover,
+.custom-btn-primary:active:focus
+{
+    color: #b86d07;
+    border-color: #b86d07;
+    background-color: transparent;
+}
+.custom-panel h4,  
+.custom-panel .price  
+{
+    font-size: 130%;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.custom-text-muted 
+{
+    color: #A9A9A9;
 }
